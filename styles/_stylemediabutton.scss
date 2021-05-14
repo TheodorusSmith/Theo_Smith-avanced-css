@@ -1,0 +1,75 @@
+@import "socialmediamixin";
+
+
+a:link{
+    color: #fff;
+}
+a:visited{
+    color: #fff;
+}
+.blog::before{
+    padding-right: 10px;
+    padding-bottom: 10px;
+    content: url(../images/laptop.png);
+}
+.twitter::before {
+    padding-right: 12px;
+    content: url(../images/twitter.png);
+}
+.linkedinn::before {
+    padding-right: 8px;
+    content: url(../images/linkedinn.png);
+}
+.facebook::before { 
+    padding-right: 12px;
+    content: url(../images/facebook.png);
+}
+.github::before { 
+    padding-right: 12px;
+    content: url(../images/github.png);
+}
+.social-container {
+    display: flex;
+    justify-content: flex-end;
+    top: 50%;
+    right: -220px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    position: fixed;
+    & ul{
+        padding: initial;
+        margin: initial;
+        & li{
+            overflow: hidden;
+            height: 30px;
+            width: 250px;
+            list-style-type:  none;
+            padding-left: 12px;
+            padding-top: 12px;
+            padding-right: 10px;
+            z-index: 100; 
+        }
+    }
+    .blog{
+       @include media (#e17b77);
+    }
+    .twitter{
+        @include media (#00aced);
+    }
+    .linkedinn{
+        @include media (#007bb6);
+    }
+    .facebook{
+        @include media (#3b5998);
+    }
+    .github {
+        @include media (#333);
+    }
+}
+
+.social-container ul li:hover{
+    padding-left: 10px;
+    margin-left: -200px;
+    transition: 800ms;
+}
+

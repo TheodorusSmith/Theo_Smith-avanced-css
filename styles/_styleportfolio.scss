@@ -1,0 +1,57 @@
+@import "portfoliobutton";
+
+* {
+    background: #c3cfe2;
+}
+.container-portfolio { 
+    margin: 100px 20px 10px 20px;
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    grid-auto-rows: 1fr;
+    grid-gap: 10px;
+    & div{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        }
+    }
+.button{
+    position: relative;
+    background-color: $buttoncolor;
+    border-radius: 10px;
+    &__child{
+        position: absolute;
+        top: 0;
+    }
+}
+.button:nth-child(2n+0){
+    $buttoncolor: #333;
+    background-color: $buttoncolor;
+}
+
+.readmore{
+    top: auto;
+    left: center;
+    border: 1px solid #000;
+    border-radius:3px;
+    justify-content: center;
+    align-items: center;
+}
+.ocky{
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 10px;
+    opacity: 100%;
+    transition-property: opacity;
+    transition-duration: 1s;
+    &:hover{
+        opacity: 0%;
+    }
+}
+
+
+
+ 

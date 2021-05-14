@@ -1,0 +1,100 @@
+@import "colortestimonial";
+
+*{
+    $backgroundcolor: #c3cfe2;
+    background-color: $backgroundcolor;
+  }
+
+  body{
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    color: $fontcolor;
+  }
+  h2{
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    margin: 0px;
+  }
+  .container-testimonial {
+    height: 100%;
+    margin: 20px;
+    border-radius: 40px;
+    box-shadow: 5px 7px 20px rgb(133, 132, 132);
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+  .header{
+    grid-area: 1/1/5/-1;
+    &__profiel-ocky {
+      $backgroundcolor: #fff;
+      background-color: $backgroundcolor;
+      grid-area: 1/1/5/-1;
+      padding: 60px; 
+      display: flex; 
+      flex-direction: column;
+      align-items: center;
+      border: solid 1px #888;
+      border-radius: 40px 40px 0px 0px;
+      box-shadow: 1px 1px 3px #888;
+      & p{
+        $backgroundcolor: #fff;
+        background-color: $backgroundcolor;
+        padding-bottom: 60px;
+      }
+    }
+  }
+  .image-ocky{
+    background-color: rgba(255, 255, 255, 0);
+    margin-top: 120px;
+    margin-bottom: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    grid-area: 4/1/6/-1;
+    & img{
+      border-radius: 90%;
+      border: solid 10px #fff;
+    }
+  }
+  .size-ocky{
+    width: 250px;
+  }
+  .function{
+    background: $backgroundcolor;
+    border-radius: 0px 0px 40px 40px;
+    grid-area: 5/1/7/-1;
+    z-index: 2;
+    &__functiontitle{
+      width: auto;
+      height: 100%;
+      padding-top: 60px;
+      background-color: $backgroundcolor;
+      border: solid 1px #686de0;
+      border-radius: 0px 0px 40px 40px;
+      box-shadow:  1px 15px 30px #888;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      }
+      & p{
+        background-color: $backgroundcolor;
+        $fontcolor: #fff;
+        color: $fontcolor;
+        text-align: center;
+        margin: 0;
+        &:first-of-type{
+          text-transform: uppercase;
+        }
+        &:last-of-type{
+          opacity: 50%;
+          font-size: 85%;
+        }
+      }
+  }
+
